@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "status": "reference-data-only-not-a-device-execution-plan",
+  "tested_identity": {
+    "model": "TQ55Q70DATXXC",
+    "family": "Q70D",
+    "diagonal_inches": 55,
+    "tizen": "8.0",
+    "architecture": "ARMv7 32-bit",
+    "firmware": "T-PTMLDDEUC-1400.0"
+  },
+  "registry": {
+    "database_path_observed": "/opt/dbspace/.pkgmgr_parser.db",
+    "table": "package_app_info",
+    "key": "app_id",
+    "fields": [
+      "app_disable",
+      "app_onboot",
+      "app_autorestart"
+    ],
+    "flag_encoding": "SQLite text strings true/false, not JSON booleans or SQL integers",
+    "observed_total_app_ids": 499,
+    "selected_count": 23,
+    "group_counts": {
+      "advertising": 8,
+      "voice": 15
+    },
+    "desired_flags": {
+      "app_disable": "true",
+      "app_onboot": "false",
+      "app_autorestart": "false"
+    },
+    "observed_before_is_not_portable_rollback": true,
+    "selected_components": [
+      {
+        "app_id": "com.samsung.tizen.samsung-analytics",
+        "group": "advertising",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.acr",
+        "group": "advertising",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "true"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.adagent-service",
+        "group": "advertising",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.canalysis-service",
+        "group": "advertising",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "true"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.contents-recognition-dbmgr",
+        "group": "advertising",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.pisa-service",
+        "group": "advertising",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.targeted-ad-service",
+        "group": "advertising",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "true",
+          "app_autorestart": "true"
+        }
+      },
+      {
+        "app_id": "org.tizen.pisa-control-service",
+        "group": "advertising",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.alexa-client",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.alexa-fullscreen-app",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.bixby-context-client",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.bixby-promotion",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.bixby-prov",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "true",
+          "app_autorestart": "true"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.bixbycapsuleviewer",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.farfieldvoice",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "true"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.mybixby",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.ondevice-voice",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "true",
+          "app_autorestart": "true"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.utterance-recommender-app",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.utterance-recommender-core",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "true",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.voice-instant-app",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.voiceassistant-music",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "false"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.wakeup-engine-alexa",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "true"
+        }
+      },
+      {
+        "app_id": "com.samsung.tv.wakeup-engine-bixby",
+        "group": "voice",
+        "observed_before": {
+          "app_disable": "false",
+          "app_onboot": "false",
+          "app_autorestart": "true"
+        }
+      }
+    ]
+  },
+  "voice_preferences": [
+    {
+      "key": "db/menu/voice/voice_activated",
+      "type": "Boolean",
+      "observed_before": true,
+      "desired": false
+    },
+    {
+      "key": "db/si_service/voice_recog_enable",
+      "type": "Boolean",
+      "observed_before": true,
+      "desired": false
+    },
+    {
+      "key": "db/multi-assistant/prelaunch_mode",
+      "type": "Boolean",
+      "observed_before": true,
+      "desired": false
+    }
+  ],
+  "condition_markers": [
+    {
+      "path": "/opt/usr/share/systemd/system/pisa-service",
+      "unit_names": [
+        "pisa-service.service",
+        "adagent-service.service"
+      ],
+      "observed_before": "absent"
+    },
+    {
+      "path": "/opt/usr/share/systemd/system/canalysis-daemon",
+      "unit_names": [
+        "canalysis-service.service"
+      ],
+      "observed_before": "absent"
+    },
+    {
+      "path": "/opt/usr/share/systemd/system/com.samsung.tv.bixby-prov",
+      "unit_names": [
+        "com.samsung.tv.bixby-prov.service"
+      ],
+      "observed_before": "absent"
+    },
+    {
+      "path": "/opt/usr/share/systemd/system/com.samsung.tv.ondevice-voice",
+      "unit_names": [
+        "com.samsung.tv.ondevice-voice.service"
+      ],
+      "observed_before": "absent"
+    },
+    {
+      "path": "/opt/usr/share/systemd/system/com.samsung.tv.farfieldvoice",
+      "unit_names": [
+        "com.samsung.tv.farfieldvoice.service"
+      ],
+      "observed_before": "absent"
+    }
+  ],
+  "visual_recognition": {
+    "unit_names": [
+      "contents-recognition-service.service",
+      "contents-ui-detector-service.service"
+    ],
+    "executable_paths_observed": [
+      "/usr/bin/contents-recognition-service",
+      "/usr/bin/contents-ui-detector-service"
+    ],
+    "expected_readback": {
+      "LoadState": "masked",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "MainPID": "0",
+      "FragmentPath": "/dev/null",
+      "UnitFileState": "masked-runtime"
+    },
+    "persistent_entry_unit": "AT-HUB.service",
+    "hook_path": "/opt/etc/parseinfo.sh",
+    "runtime_mask_parent": "/run/systemd/system",
+    "installer_included": true,
+    "installer_source": "../tools/recognition.py",
+    "first_instant_blocking_guaranteed": false
+  },
+  "preserve": {
+    "shared_units_observed_active": [
+      "data-service.service",
+      "com.samsung.tv.context-aware-service.service",
+      "org.tizen.tv.sp-kpi.service"
+    ],
+    "excluded_from_disable": [
+      "org.tizen.voice-app",
+      "voice-client",
+      "text-to-speech and accessibility components",
+      "launcher and streaming apps"
+    ]
+  },
+  "provenance": {
+    "selected_registry_rows": "L1 and L2 apply guards and matching field-specific inverse; exact selected rows corroborated by L4",
+    "preferences": "L2 and L4",
+    "condition_markers": "L1 and L2 unit condition checks, not inferred from package names",
+    "visual_units_and_final_state": "L3 and L4",
+    "source_ledger": "../docs/sources.md"
+  }
+}

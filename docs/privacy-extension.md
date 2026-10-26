@@ -25,11 +25,23 @@ private migration is not a reason to rerun the create-once installer.
 
 A requested normal systemd reboot was rejected because the reference firmware
 has no `reboot.target`. No alternate forced reboot or repeated activation was
-performed. The corrected hook's automatic execution after a genuinely new kernel
-boot remains unverified, and the old voice/sensor processes had survived the
-registry change. Do not claim they are gone until postboot observation confirms
-it. Family picture/audio/streaming/remote acceptance after this extension is also
-pending. Prepared recovery and offline roundtrips are not an on-TV restoration.
+performed. The owner subsequently restarted the TV with the physical remote.
+Independent read-only observation confirmed a changed kernel boot identity,
+fresh successful receipts from both hook layers, released locks, all six runtime
+masks and inactive targets. The five service units had MainPID=0; the `.path`
+correctly omitted that service-only property. No selected voice, sensor,
+discovery, remote-support or visual-recognition executable was observed. All
+incomplete process reads were classified as kernel threads or zombies, with no
+unclassified live user process.
+
+The guarded extension readback passed. All 499 flag triples, four false
+voice/sound-detection preferences, selected markers and approved hook/recovery
+hashes and metadata were preserved. The selected shared services remained
+active. Nothing was reinstalled or manually activated during verification.
+Temporary access was closed and the TV was turned off through its existing local
+control, corroborated by independent API PowerState=standby. Family
+picture/audio/streaming/remote acceptance is separate and was not independently
+observed. Prepared recovery and offline roundtrips are not an on-TV restoration.
 
 
 ## Selection

@@ -4,7 +4,7 @@
 
 Procedimiento específico para la Samsung Q70D que desactiva componentes seleccionados de publicidad, ACR y voz sin desinstalar el launcher ni las aplicaciones de streaming. Incluye generadores offline, el código del bloqueo visual persistente, inversas, pruebas con datos sintéticos y un adaptador de acceso temporal.
 
-No es un debloater automático. Son cambios privilegiados: hay que leer el procedimiento, preparar la recuperación y comprobar el resultado. Los cambios originales se observaron en una TV; las herramientas públicas portables tienen sus propias pruebas offline y no se han vuelto a instalar en ella.
+No es un debloater automático. Son cambios privilegiados: hay que leer el procedimiento, preparar la recuperación y comprobar el resultado. Los cambios base se observaron en una TV; su adaptación pública tiene pruebas offline propias. La ampliación opcional tiene su propio [alcance y límites de verificación](docs/privacy-extension.md).
 
 ## Equipo de referencia
 
@@ -22,8 +22,9 @@ No se extrapola a otros modelos, sufijos regionales o firmware. Deben coincidir 
 - Se bloquearon `contents-recognition-service.service` y `contents-ui-detector-service.service` con dos máscaras runtime. Un wrapper ejecutado por el `AT-HUB.service` existente conserva y ejecuta primero el script Samsung original firmado, y después reaplica el bloqueo.
 - Tras un nuevo arranque real del kernel, una lectura independiente confirmó ambas unidades masked-runtime, inactive y MainPID=0, sin sus ejecutables seleccionados activos.
 - El propietario confirmó los consentimientos opcionales rechazados, el micrófono físico de la TV apagado y HbbTV desactivado desde el menú. Esto no demuestra que se desconecte eléctricamente el micrófono separado del mando.
+- Una [segunda pasada de privacidad](docs/privacy-extension.md) añade seis triples de flags de voz/sensores, dos marcadores y cuatro máscaras de descubrimiento/soporte remoto, conservando el perfil anterior. Se comprobaron instalación y flags por separado; falta verificar la extensión corregida tras un arranque real nuevo y probar el uso familiar. El [análisis comunitario](docs/community-privacy-review.md) distingue evidencias y posibles pérdidas funcionales.
 
-El root de mantenimiento es temporal. El hook privilegiado persiste solo para bloquear esos dos servicios; no instala un servicio de acceso root remoto. Home Assistant no es necesario.
+El root de mantenimiento es temporal. El hook privilegiado persiste solo para reaplicar las máscaras seleccionadas; no instala un servicio de acceso root remoto. Home Assistant no es necesario.
 
 ## Empezar sin tocar la TV
 

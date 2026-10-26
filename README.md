@@ -4,7 +4,7 @@
 
 A model-specific privacy workflow for the Samsung Q70D. It disables selected advertising, ACR and voice components without uninstalling the launcher or streaming apps. It includes offline plan generators, a narrow visual-recognition boot hook, inverse operations, synthetic tests and a temporary-access adapter.
 
-This is privileged device work, not a one-click debloater. Read the procedure and recovery limits first. The original changes were observed on one TV; the portable public tools have their own offline tests and have not been newly installed on that TV.
+This is privileged device work, not a one-click debloater. Read the procedure and recovery limits first. The original base changes were observed on one TV; its public adaptation has separate offline tests. The optional follow-up has its own [scope and verification boundaries](docs/privacy-extension.md).
 
 ## Tested reference
 
@@ -24,6 +24,7 @@ Another Q70D, regional suffix, firmware or Tizen generation is not automatically
 - Two additional visual services, `contents-recognition-service.service` and `contents-ui-detector-service.service`, masked under `/run/systemd/system`. The existing `AT-HUB.service` boot entry invokes a wrapper that runs the preserved signed Samsung stock first, then reapplies the two masks and stops those services.
 - Independent reads after a changed kernel boot identity found both visual units masked-runtime, inactive and MainPID=0, with no selected executable observed.
 - The owner separately confirmed optional privacy consents rejected, the TV microphone switch off and HbbTV disabled in the menu. The TV switch is not proof of electrical isolation of the remote's separate microphone.
+- A [second privacy pass](docs/privacy-extension.md) adds six voice/sensor flag triples, two markers and four discovery/remote-support masks while preserving the original profile. Installation and flags were independently checked, but the corrected extension still needs a real new-boot verification and family playback checks. See the [community assessment](docs/community-privacy-review.md) for evidence and trade-offs.
 
 This is registry disabling, not package removal. Temporary maintenance root is separate from the intentional privileged blocking hook; no persistent remote-root service is installed. Home Assistant is not required.
 

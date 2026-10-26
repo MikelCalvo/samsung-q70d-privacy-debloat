@@ -5,7 +5,8 @@ This repository distributes original offline planners, the narrow visual-hook so
 ## What the evidence covers
 
 - The reference changes were observed on one TQ55Q70DATXXC, Tizen 8 ARMv7, firmware T-PTMLDDEUC-1400.0.
-- The public adaptations are tested offline. That does not make them newly hardware-tested.
+- The original public adaptations are tested offline; that does not make them newly hardware-tested. The [optional privacy extension](docs/privacy-extension.md) was generated for the reference TV and its installation, six selected flag triples and markers were independently read back. Its corrected hook still lacks new-kernel-boot verification and physical family acceptance.
+- The extension's initial activation failed a service-only PID expectation on a `.path` unit. The fixed files were independently reviewed and installed; a requested normal reboot returned `reboot.target` not found. No forced reboot, manual activation replay or successful postboot outcome is claimed.
 - Automatic reapplication of the original visual hook was observed after a real new kernel boot. It does not guarantee blocking from the first instant of startup.
 - Recovery assets and read-only admission were checked. Complete restoration was tested on synthetic fixtures, not performed on the TV.
 - General owner acceptance is not a complete per-app/input playback matrix.
